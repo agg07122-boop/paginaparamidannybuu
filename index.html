@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para mi Dannybuu</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; font-family: 'Trebuchet MS', sans-serif; overflow-x: hidden; }
+
+    /* Carrusel de fondo */
+    .carousel {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1; overflow: hidden;
+    }
+    .carousel img {
+      position: absolute; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0; transition: opacity 2s;
+    }
+    .carousel img.active { opacity: 1; }
+
+    /* Contenedor principal */
+    .contenedor {
+      background: rgba(0,0,0,0.6);
+      margin: 0 auto; padding: 30px;
+      max-width: 1000px; border-radius: 20px;
+      box-shadow: 0 0 20px red; color: white; text-align: center;
+    }
+    h1 { font-size: 3rem; color: #ff0000; text-shadow: 2px 2px 5px black; }
+    h2 { margin-top: 10px; font-size: 1.5rem; color: #00aaff; }
+    p { margin-top: 10px; font-size: 1.2rem; }
+
+    /* Galería de fotos */
+    .galeria {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px; margin-top: 20px;
+    }
+
+    /* Flip de fotos */
+    .flip-card { perspective: 1000px; width: 220px; height: 250px; margin: auto; transition: transform 0.3s; }
+    .flip-card:hover { transform: scale(1.05); }
+    .flip-card-inner {
+      position: relative; width: 100%; height: 100%;
+      transition: transform 0.6s; transform-style: preserve-3d; cursor: pointer;
+    }
+    .flip-card-inner.flipped { transform: rotateY(180deg); box-shadow: 0 0 20px red; }
+    .flip-card-front, .flip-card-back {
+      position: absolute; width: 100%; height: 100%;
+      backface-visibility: hidden; border-radius: 10px; overflow: hidden;
+    }
+    .flip-card-front img { width: 100%; height: 100%; object-fit: cover; border: 2px solid red; }
+    .flip-card-back {
+      background-color: rgba(255,0,0,0.85); color: white;
+      display: flex; justify-content: center; align-items: center;
+      padding: 10px; transform: rotateY(180deg);
+      text-align: center; font-size: 1rem; font-weight: bold; border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Carrusel -->
+  <div class="carousel">
+    <img src="imagenes/Da1.jpeg" class="active">
+    <img src="imagenes/Da2.jpeg">
+    <img src="imagenes/Da3.jpeg">
+    <img src="imagenes/Da4.jpeg">
+    <img src="imagenes/Da5.jpeg">
+    <img src="imagenes/Da6.jpeg">
+    <img src="imagenes/Da7.jpeg">
+    <img src="imagenes/Da8.jpeg">
+    <img src="imagenes/Da9.jpeg">
+    <img src="imagenes/Da10.jpeg">
+    <img src="imagenes/Da11.jpeg">
+    <img src="imagenes/Da12.jpeg">
+    <img src="imagenes/Da13.jpeg">
+    <img src="imagenes/Da15.jpeg">
+    <img src="imagenes/Da16.jpeg">
+    <img src="imagenes/Da17.jpeg">
+    <img src="imagenes/Da18.jpeg">
+    <img src="imagenes/Da19.jpeg">
+    <img src="imagenes/Da20.jpeg">
+    <img src="imagenes/Da21.jpeg">
+    <img src="imagenes/Da22.jpeg">
+    <img src="imagenes/Da23.jpeg">
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor">
+    <h1>Hola mi amor</h1>
+    <h2>La hice con amor, de parte de tu nena</h2>
+
+    <!-- Galería completa -->
+    <div class="galeria">
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da1.jpeg"></div><div class="flip-card-back">Eres el inicio y el final de mis días</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da2.jpeg"></div><div class="flip-card-back">Tu sonrisa ilumina mi mundo</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da3.jpeg"></div><div class="flip-card-back">A tu lado todo es más bonito</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da4.jpeg"></div><div class="flip-card-back">Eres mi lugar favorito</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da5.jpeg"></div><div class="flip-card-back">Me haces sentir la persona más feliz</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da6.jpeg"></div><div class="flip-card-back">Tus abrazos son mi refugio</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da7.jpeg"></div><div class="flip-card-back">Te amo más de lo que las palabras explican</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da8.jpeg"></div><div class="flip-card-back">Cada día contigo es un regalo</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da9.jpeg"></div><div class="flip-card-back">Eres mi mejor aventura</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da10.jpeg"></div><div class="flip-card-back">Me haces creer en el amor verdadero</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da11.jpeg"></div><div class="flip-card-back">Eres mi sueño hecho realidad</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da12.jpeg"></div><div class="flip-card-back">No necesito nada más que a ti</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da13.jpeg"></div><div class="flip-card-back">Tu amor es mi fuerza cada día</div></div></div>
+      <!-- Saltamos Da14 -->
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da15.jpeg"></div><div class="flip-card-back">Eres mi persona favorita en el mundo</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da16.jpeg"></div><div class="flip-card-back">A tu lado todo tiene sentido</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da17.jpeg"></div><div class="flip-card-back">Eres mi razón para sonreír cada día</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da18.jpeg"></div><div class="flip-card-back">Siempre serás mi mejor historia</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da19.jpeg"></div><div class="flip-card-back">Mi corazón late solo por ti</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da20.jpeg"></div><div class="flip-card-back">Eres mi hoy y mi siempre</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da21.jpeg"></div><div class="flip-card-back">Nada se compara a lo que siento por ti</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da22.jpeg"></div><div class="flip-card-back">Contigo quiero todo, para siempre</div></div></div>
+      <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="imagenes/Da23.jpeg"></div><div class="flip-card-back">Mi amor por ti no tiene final</div></div></div>
+    </div>
+
+    <!-- Texto final -->
+    <p style="margin-top:30px; font-size:1rem; color:#ffffff; text-align:center;">
+      Te amo bebe, no sabia que darte queria algo unico y que no hiciera cualquier persona asi que se me ocurrio una pagina web que solo tengas tu y puedas ver tu
+    </p>
+  </div>
+
+  <script>
+    // Carrusel
+    let index = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    function showNextImage() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    setInterval(showNextImage, 4000);
+
+    // Flip de fotos al click
+    const cards = document.querySelectorAll('.flip-card-inner');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+    // Volteo automático final
+    function voltearGaleria() {
+      let i = 0;
+      const interval = setInterval(() => {
+        if(i >= cards.length) {
+          clearInterval(interval);
+          return;
+        }
+        cards[i].classList.add('flipped');
+        i++;
+      }, 300); // cada 300ms una imagen se voltea
+    }
+
+    // Esperamos 2 segundos y luego voltea todas
+    setTimeout(voltearGaleria, 2000);
+  </script>
+
+</body>
+</html>
